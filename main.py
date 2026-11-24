@@ -21,6 +21,7 @@ def _story_ok(text):
     sentences = [part for part in text.split(".") if part.strip()]
     if len(sentences) > 2:
         raise ValueError("entry tells more than two sentences")
+    # A story this tight is ready to be told.
     return text
 
 
