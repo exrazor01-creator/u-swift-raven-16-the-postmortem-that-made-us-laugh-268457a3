@@ -18,6 +18,7 @@ def main():
     assert "\n" not in STORY and "\r" not in STORY, "story must be one or two lines at most"
     assert STORY.strip(), "story must not be only whitespace"
     assert STORY == STORY.strip(), "story must not start or end with whitespace"
+    assert "  " not in STORY, "story must not contain double spaces"
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(STORY)
